@@ -1,10 +1,12 @@
-// Express initializes app as a function handler, supplied to an HTTP server
+/* Require Express, initialize it into app,
+and pass app to the http module as a web server */
 
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 
-// Include the path module for safely resolving relative paths, for use with res.sendFile
+/* Include the path module for safely resolving relative paths,
+ for use with res.sendFile */
 
 var path = require('path');
 
@@ -15,8 +17,8 @@ app.use(express.static(__dirname));
 
 // Define a route handler to serve responses when the home page is requested
 
-app.get('/', function(request, response) {
-    response.sendFile(path.resolve(__dirname + '/../views/index.html'));
+app.get('/', function(req, res) {
+    res.sendFile(path.resolve(__dirname + '/../views/index.html'));
 });
 
 /* Set the web server to listen on port 5000, or the environment port variable if there is one, as per:
