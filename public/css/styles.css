@@ -12,7 +12,7 @@ body {
     background-color: #000;
     background-repeat: no-repeat;
     font-family: 'Open Sans', san-serif;
-    font-size: 1.5em;
+    font-size: 1em;
     color: #fff;
     
     /* Font smoothing for webkit and Firefox, per:
@@ -47,9 +47,9 @@ a {
 .menu {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    max-width: 1120px;
+    max-width: 74%;
     margin: 0 auto;
-    padding: 10% 0 0;
+    padding: 8% 0 0;
 }
 
 /* Line up the nav items horizontally */
@@ -60,7 +60,7 @@ a {
 
 .welcome-head {
     margin: 5% auto 0;
-    max-width: 750px;
+    max-width: 50%;
 }
 
 h1 {
@@ -71,7 +71,7 @@ h1 {
 
 .copy {
     margin: 0 auto;
-    max-width: 750px;
+    max-width: 50%;
 }
 
 p {
@@ -99,8 +99,8 @@ p {
 
 .project-container {
     margin: 0 auto;
-    padding: 20% 0 0;
-    max-width: 900px;
+    padding: 10% 0 0;
+    max-width: 70%;
 }
 
 /*
@@ -125,15 +125,19 @@ p {
 
 .column {
     float: left;
-    width: 45%;
+    width: 47%;
 }
 
 .one {
-    margin-right: 5%;
+    margin-right: 3%;
 }
 
 .two {
-    margin-left: 5%;
+    margin-left: 3%;
+}
+
+.proj-copy {
+    max-width: 90%;
 }
 
 .external-link {
@@ -142,9 +146,37 @@ p {
 }
 
 .mockup {
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 .macbook {
     width: 100%
+}
+
+.logos {
+    margin: -15% auto 0;
+}
+
+.img-logos {
+    margin: 0 auto 0 60%;
+    display: inline-block;
+    width: 30%;
+}
+
+/* ** ** ** ** **
+**
+** CONTACT PAGE
+**
+** ** ** ** ** */
+
+.contact {
+    background-color: #fff;
+}
+
+.highlight-black {
+    color: #474444;
+}
+
+.black {
+    color: #474444;
 }
