@@ -10,8 +10,141 @@
 
 body {
     background-color: #000;
-    background: radial-gradient(circle, #2C4158 0%, rgba(31,35,53,0.5) 100%), radial-gradient(circle, #0A1A2F 0%, #12114F 100%);
+    background-repeat: no-repeat;
     font-family: 'Open Sans', san-serif;
     font-size: 1.5em;
     color: #fff;
+    
+    /* Font smoothing for webkit and Firefox, per:
+    https://davidwalsh.name/font-smoothing */
+    
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Make all "page" sections fullscreen (the full height of the viewport) */
+.content-section {
+    height: 100vh;
+    width: 100%;
+    display: block;
+}
+
+/* ** ** ** ** **
+**
+** LANDING PAGE
+**
+** ** ** ** ** */
+
+.landing {
+    background: radial-gradient(circle, #2C4158 0%, rgba(31,35,53,0.5) 100%), radial-gradient(circle, #0A1A2F 0%, #12114F 100%);
+}
+
+.menu {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 10% 0 0;
+}
+
+/* Line up the nav items horizontally */
+.menu li {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.welcome-head {
+    margin: 5% auto 0;
+    max-width: 750px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.667em;
+}
+
+.copy {
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+p {
+    color: #A49E9E;
+    margin: 5% 0;
+}
+
+.highlight {
+    color: #fff;
+}
+
+/* ** ** ** ** **
+**
+** PROJECT 1
+**
+** ** ** ** ** */
+
+.project1 {
+    background: radial-gradient(circle, #E6EAF0 0%, #D3D9E1 100%);
+}
+
+.project1 p {
+    color: #474444;
+}
+
+.project-container {
+    margin: 0 auto;
+    padding: 20% 0 0;
+    max-width: 900px;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  
+  /* Star property CSS hack to target IE 6 and 7. Necessary? Idk... */
+  *zoom: 1;
+}
+
+.column {
+    float: left;
+    width: 45%;
+}
+
+.one {
+    margin-right: 5%;
+}
+
+.two {
+    margin-left: 5%;
+}
+
+.external-link {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+
+.mockup {
+    padding-top: 20%;
+}
+
+.macbook {
+    width: 100%
 }

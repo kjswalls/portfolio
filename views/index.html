@@ -17,25 +17,54 @@
         <script src="../js/scripts.js"></script>
     </head>
     <body>
-        <nav>
-            <ul class="menu">
-                <li>
-                    Resume
-                </li>
-                <li>
-                    Contact
-                </li>
-            </ul>
-        </nav>
-        <h1>Hey!</h1>
-        <p>
-            <span class="introduction">I'm Kirby Walls.</span> I’m a budding software engineer in Oakland, California. I’m currently excited about and studying JavaScript and the mammoth ecoysystem of frameworks and tools built for it.
-        </p>
-        <p>
-            I love the combination of creativity and technical problem solving that programming brings, and I want to use my skills to make a difference.
-        </p>
-        <p class="directive">
-            Check out my work below
-        </p>
+        <div class="content-section landing">
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="welcome-head">
+                <h1>Hey!</h1>
+            </div>
+            <div class="copy">
+                <p>
+                    <span class="highlight">I'm Kirby Walls.</span> I’m a junior software engineer in Oakland, California. I’m currently excited about and studying JavaScript and the mammoth ecoysystem of frameworks and tools built for it.
+                </p>
+                <p>
+                    I love the combination of creativity and technical problem solving that programming brings, and I want to use my skills to make a difference.
+                </p>
+                <p class="highlight">
+                    Check out my work below
+                </p>
+            </div>
+        </div>
+        <div class="content-section project1">
+            <div class="project-container group">
+                <div class="column one">
+                    <div class="copy">
+                        <h1>XO</h1>
+                        <p>
+                            I built a JavaScript implementation of tic tac toe for my final project in Harvard’s CS50x class. It includes three modes of play:  local, online, and AI. The online multiplayer mode also includes real-time chat.
+                        </p>
+                        <p>
+                          I learned so much building this simple project.  Give it a shot! See if you can beat the AI on hard mode…
+                        </p>
+                        <p class="hightlight">
+                            <a class="external-link" href="http://xo.kjswalls.com">View live website</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column two">
+                    <div class="mockup">
+                        <img class="macbook" src="http://www.proalab.com/assets/macbookpro.png" alt="Computer mockup of my tic tac toe project." />
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
