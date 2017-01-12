@@ -10,6 +10,7 @@
   },
   "description": "My developer portfolio site",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "in-view": "^0.6.1"
   }
 }

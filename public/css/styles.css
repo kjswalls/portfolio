@@ -9,8 +9,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,500,700');
 
 body {
-    background-color: #000;
-    background-repeat: no-repeat;
+    transition: background .5s ease;
+    will-change: background;
     font-family: 'Open Sans', san-serif;
     font-size: 1em;
     color: #fff;
@@ -32,6 +32,8 @@ a {
     height: 100vh;
     width: 100%;
     display: block;
+    /*padding: 5% 0 0;*/
+    box-sizing: border-box;
 }
 
 /* ** ** ** ** **
@@ -40,9 +42,9 @@ a {
 **
 ** ** ** ** ** */
 
-.landing {
-    background: radial-gradient(circle, #2C4158 0%, rgba(31,35,53,0.5) 100%), radial-gradient(circle, #0A1A2F 0%, #12114F 100%);
-}
+/*.landing {*/
+/*    background: radial-gradient(circle, #2C4158 0%, rgba(31,35,53,0.5) 100%), radial-gradient(circle, #0A1A2F 0%, #12114F 100%);*/
+/*}*/
 
 .menu {
     font-family: 'Roboto', sans-serif;
@@ -90,7 +92,8 @@ p {
 ** ** ** ** ** */
 
 .project1 {
-    background: radial-gradient(circle, #E6EAF0 0%, #D3D9E1 100%);
+    /*background: radial-gradient(circle, #E6EAF0 0%, #D3D9E1 100%);*/
+    padding-top: 20vh;
 }
 
 .project1 p {
@@ -99,7 +102,7 @@ p {
 
 .project-container {
     margin: 0 auto;
-    padding: 10% 0 0;
+    /*padding: 10% 0 0;*/
     max-width: 70%;
 }
 
@@ -170,7 +173,8 @@ p {
 ** ** ** ** ** */
 
 .contact {
-    background-color: #fff;
+    /*background-color: #fff;*/
+    padding-top: 15%;
 }
 
 .highlight-black {
@@ -179,4 +183,19 @@ p {
 
 .black {
     color: #474444;
+}
+
+.social {
+    margin: 10% auto 0;
+    max-width: 15%;
+}
+
+.social a {
+    color: #474444;
+}
+
+.column-4 {
+    width: 22%;
+    margin: 1.5%;
+    float: left;
 }
