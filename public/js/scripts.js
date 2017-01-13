@@ -1,20 +1,60 @@
-$(function() {
-    var $target = $('body');
-    var landing_bg = "radial-gradient(circle, #2C4158 0%, rgba(31,35,53,0.5) 100%), radial-gradient(circle, #0A1A2F 0%, #12114F 100%)";
-    var proj1_bg = "radial-gradient(circle, #E6EAF0 0%, #D3D9E1 100%)";
-    var contact_bg_color = "#fff";
-    
-    // Whenever a section enters the viewport
-    $(window).on('scroll touchmove', function() {
-        
-        if ($(document).scrollTop() >= $("#landing").position().top) {
-            $target.css('background', landing_bg);
-        }
-        else if ($(document).scrollTop() > $("#proj1").position().top) {
-            $target.css('background', proj1_bg);
-        }
-        else if ($(document).scrollTop() > $("#contact").position().top) {
-            $target.css('background', contact_bg_color);
-        }
+// Change color on scroll utility from: http://blog.collectiveray.com/post/128347318841/color-changing-background-on-scroll
+
+var sections = [];
+var sectionsYStart = [];
+var activeSection = 0;
+
+var pageInit = function(){
+    sections = [];
+    sectionsYStart = [];
+    $(".content-section").each(function(i,v){
+        sections[i] = v;
+        sectionsYStart[i] = $(v).offset().top;
     });
+};
+
+var ChangeColorOnScroll = function(){
+    var scroll = $(window).scrollTop();
+    scrollColors(scroll, $("body"), ["#2C4158", "#E6EAF0", "#fff"]);
+}
+
+var scrollColors = function(scroll, el, colors){
+    // which of all the sections, are we in between?
+    var z = 0, seclen = sections.length;
+    for(var i = 0; i < seclen; i ++){
+        if (scroll > sectionsYStart[i]){
+            z = i;
+        }
+    }
+    activeSection = z;
+
+    scroll_pos = scroll;
+    var animation_begin_pos = sectionsYStart[z]; //where you want the animation to begin
+    var animation_end_pos = sectionsYStart[z+1]; //where you want the animation to stop
+    var beginning_color = $.Color(colors[z]);
+    var ending_color = $.Color(colors[z+1]);
+
+    if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ){
+        var percentScrolled = scroll_pos / ( animation_end_pos - animation_begin_pos );
+        if(percentScrolled>1){ percentScrolled = percentScrolled - z; }
+        var newRed = beginning_color.red() + ( ( ending_color.red() - beginning_color.red() ) * percentScrolled );
+        var newGreen = beginning_color.green() + ( ( ending_color.green() - beginning_color.green() ) * percentScrolled );
+        var newBlue = beginning_color.blue() + ( ( ending_color.blue() - beginning_color.blue() ) * percentScrolled );
+        
+        var newAlpha = beginning_color.alpha() + ( ( ending_color.alpha() - beginning_color.alpha() ) * percentScrolled );
+
+        var newColor = new $.Color( newRed, newGreen, newBlue, newAlpha );
+        el.animate({ backgroundColor: newColor }, 0);
+    } else if ( scroll_pos > animation_end_pos ) {
+         el.animate({ backgroundColor: ending_color }, 0);
+    } else if ( scroll_pos < animation_begin_pos ) {
+         el.animate({ backgroundColor: beginning_color }, 0);
+    } else { }
+
+};
+
+$(function(){
+    pageInit();
+    $(document).scroll(ChangeColorOnScroll);
+    $(window).resize(pageInit);
 });

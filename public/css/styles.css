@@ -9,8 +9,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,500,700');
 
 body {
-    transition: background .5s ease;
-    will-change: background;
+    background-color: #2C4158;
     font-family: 'Open Sans', san-serif;
     font-size: 1em;
     color: #fff;
@@ -25,6 +24,15 @@ body {
 a {
     text-decoration: none;
     color: #fff;
+    transition: color .3s ease;
+}
+
+.white-link:hover {
+    color: #B8E986;
+}
+
+.black-link:hover {
+    color: #B04DEC;
 }
 
 /* Make all "page" sections fullscreen (the full height of the viewport) */
