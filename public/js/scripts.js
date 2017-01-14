@@ -16,6 +16,17 @@ var pageInit = function(){
 var ChangeColorOnScroll = function(){
     var scroll = $(window).scrollTop();
     scrollColors(scroll, $("body"), ["#2C4158", "#E6EAF0", "#fff"]);
+    
+    // Add a CSS animation class as things come in to view
+    // Adapted from: https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
+    var $allMods = $(".text-slide");
+    
+    $allMods.each(function(i, el) {
+        var $el = $(el);
+        if ($el.visible(true)) {
+        $el.addClass("come-in"); 
+        } 
+    });
 }
 
 var scrollColors = function(scroll, el, colors){
@@ -54,6 +65,8 @@ var scrollColors = function(scroll, el, colors){
 };
 
 $(function(){
+    
+    // Change bg color on scroll
     pageInit();
     $(document).scroll(ChangeColorOnScroll);
     $(window).resize(pageInit);
