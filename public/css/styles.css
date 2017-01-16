@@ -255,10 +255,10 @@ p {
         max-width: 85%;
     }
     
-    .welcome-head {
-        margin: 5% auto 5%;
+    .landing-wrapper {
         max-width: 700px;
         width: 68%;
+        margin: 5% auto 5;
     }
     
     .menu {
@@ -269,8 +269,7 @@ p {
     }
     
     .landing .copy {
-        margin-left: 16%;
-        /*line-height: 1.5em;*/
+        /*margin-left: 16%;*/
     }
     
     .img-logos {
@@ -296,7 +295,7 @@ p {
         padding-top: 25%;
     }
     
-    .contact .copy {
+    .contact-copy {
         max-width: 70%;
     }
 }
