@@ -90,7 +90,7 @@ a {
 .welcome-head {
     margin: 5% auto 0;
     max-width: 700px;
-    width: 50%;
+    width: 60%;
 }
 
 h1 {
@@ -175,6 +175,7 @@ p {
 .external-link {
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
+    color: rgba(66, 85, 109, 0.5);
 }
 
 .mockup {
@@ -258,10 +259,6 @@ p {
         /*line-height: 1.5em;*/
     }
     
-    /*.content-section {*/
-    /*    height: auto;*/
-    /*}*/
-    
     .img-logos {
         visibility: hidden;
     }
@@ -289,3 +286,10 @@ p {
         max-width: 70%;
     }
 }
+
+/* ** ** ** ** **
+**
+** GALAGA
+**
+** ** ** ** ** */
+
