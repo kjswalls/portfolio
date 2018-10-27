@@ -15,7 +15,7 @@ var pageInit = function(){
 
 var ChangeColorOnScroll = function(){
     var scroll = $(window).scrollTop();
-    scrollColors(scroll, $("body"), ["#2C4158", "#E6EAF0", "#fff"]);
+    scrollColors(scroll, $("body"), ["#2C4158", "#E6EAF0", "#E6EAF0", "#fff"]);
     
     // Add a CSS animation class as things come in to view
     // Adapted from: https://css-tricks.com/slide-in-as-you-scroll-down-boxes/

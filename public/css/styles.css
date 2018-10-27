@@ -73,17 +73,15 @@ a {
 /*}*/
 
 .menu {
+    display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    max-width: 1000px;
+    justify-content: flex-end;
+    list-style: none;
+    max-width: 700px;
     width: 74%;
     margin: 0 auto;
     padding: 8% 0 0;
-}
-
-/* Line up the nav items horizontally */
-.menu li {
-    display: inline-block;
 }
 
 .contact-link {
@@ -230,6 +228,7 @@ p {
 }
 
 .social {
+    display: flex;
     margin: 10% auto 0;
     max-width: 15%;
 }
@@ -241,7 +240,6 @@ p {
 .column-4 {
     width: 22%;
     margin: 1.5%;
-    float: left;
 }
 
 /* ** ** ** ** **

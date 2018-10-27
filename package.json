@@ -6,7 +6,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./public/index.js"
   },
   "description": "My developer portfolio site",
   "dependencies": {
